@@ -1,0 +1,10 @@
+deploykf_core:
+  deploykf_istio_gateway:
+    gatewayService:
+      name: "deploykf-gateway"
+      type: "LoadBalancer"
+      annotations:
+        metallb.universe.tf/loadBalancerIPs: 192.168.1.190  # 这里将IP地址设置为190
+      ports:
+        http: 80
+        https: 443
